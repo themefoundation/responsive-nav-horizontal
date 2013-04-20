@@ -57,6 +57,7 @@
 
 .thmfdn-menu > li > a{
 	display: inline-block;
+	margin-bottom: 0.25em;
 }
 
 .thmfdn-menu a{
@@ -138,6 +139,4 @@
 	}
 
 }
-
-
 
