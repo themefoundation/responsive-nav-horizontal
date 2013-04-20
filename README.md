@@ -11,4 +11,6 @@ An honest attempt to make a beautiful, accessible, cleanly coded, mobile first, 
 
 I'm not really sure how this will work out. Input is welcome.
 
+HTML structure will follow the default WordPress menu output. CSS/Javascript will take inspiration from sources such as the Superfish menu and responsive-nav.com.
+
 
