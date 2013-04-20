@@ -29,8 +29,9 @@
 }
 
 .thmfdn-menu a{
-	background: #eee;
+	background: #333;
 	position: relative;
+	color: #eee;
 }
 
 .thmfdn-menu ul li{
@@ -65,7 +66,7 @@
 }
 
 .thmfdn-menu a:hover{
-	background: #ddd;
+	background: #444;
 }
 
 .thmfdn-menu ul{
@@ -140,3 +141,77 @@
 
 }
 
+.thmfdn-menu-arrows .has-submenu > a{
+	padding-right: 3em;
+}
+.thmfdn-menu-arrows .toggle-submenu{
+	background: rgba( 255, 255, 255, 0.05);
+	width: 2.5em;
+	display: inline-block;
+	height: 2.5em;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.thmfdn-menu-arrows a:hover .toggle-submenu{
+	background: transparent;
+}
+
+
+.thmfdn-menu-arrows .toggle-submenu:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	margin-top: -3px;
+	height: 0;
+	width: 0;
+
+	border: 5px solid transparent;
+	border-top-color: #fff; /* IE8 */
+	border-top-color: rgba(255,255,255,.5);
+}
+
+.thmfdn-menu-arrows ul .toggle-submenu:after {
+	margin-top: -5px;
+	margin-right: -3px;
+
+	border: 5px solid transparent;
+	border-left-color: #fff; /* IE8 */
+	border-left-color: rgba(255,255,255,.5);
+}
+
+
+
+
+
+
+
+
+/*** arrows (for all except IE7) **/
+.sf-arrows .sf-with-ul {
+	padding-right: 2.5em;
+	*padding-right: 1em; /* no CSS arrows for IE7 (lack pseudo-elements) */
+}
+/* styling for both css and generated arrows */
+
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: white; /* IE8 fallback colour */
+}
+/* styling for right-facing arrows */
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-left-color: rgba(255,255,255,.5);
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: white;
+}
