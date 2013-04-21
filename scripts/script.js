@@ -1,32 +1,40 @@
 (function($) {
 
+var touch = false;
+
 	$(document).ready(function() {
 
-		// setMenuToggle();
-		var touch = false;
 		if ( 'ontouchstart' in document.documentElement ) {
 			touch = true;
+			$('.thmfdn-menu').removeClass('hover');
 		}
 
 		setMenuArrows( touch );
-
-		if( touch ) {
-			$('.thmfdn-menu').removeClass('hover');
-		}
+		setMenuToggle( touch );
 
 	});
 
 	$(window).resize(function() {
-		// setMenuToggle();
+		setMenuToggle( touch );
 	});
 
-	function setMenuToggle() {
+	function setMenuToggle( touch ) {
 		var viewportWidth = viewportSize.getWidth();
 		if( viewportWidth < 600 && !$('.thmfdn-menu').hasClass('thmfdn-mobile-menu') ) {
 			$('.thmfdn-menu').addClass('thmfdn-mobile-menu');
+			$('.thmfdn-menu').removeClass('hover');
+			$('.toggle-submenu').unbind();
+			$('.toggle-submenu').click(function(){
+				toggleSubmenu( $(this) );
+			});
 		}
 		if( viewportWidth >= 600 && $('.thmfdn-menu').hasClass('thmfdn-mobile-menu') ) {
 			$('.thmfdn-menu').removeClass('thmfdn-mobile-menu');
+			if( ! touch ) {
+				$('.thmfdn-menu').addClass('hover');
+				$('.toggle-submenu').unbind();
+				// $('.toggle-submenu').removeClass('open-submenu')
+			}
 		}
 	}
 
@@ -35,6 +43,7 @@
 		$('.thmfdn-menu li').has('ul').addClass('has-submenu');
 		$('.has-submenu > a').append('<span class="toggle-submenu"></span>');
 		if( touch ) {
+			$('.toggle-submenu').unbind();
 			$('.toggle-submenu').click(function(){
 				toggleSubmenu( $(this) );
 			});
@@ -52,10 +61,7 @@
 			$('.open-submenu').removeClass('open-submenu');
 			submenu.parents('.has-submenu').addClass('open-submenu');
 			submenu.addClass('open-submenu');
-
 		}
 	}
-
-
 
 })(jQuery);

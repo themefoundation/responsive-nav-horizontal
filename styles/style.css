@@ -29,9 +29,7 @@
 }
 
 .thmfdn-menu a{
-	background: #333;
 	position: relative;
-	color: #eee;
 }
 
 .thmfdn-menu ul li{
@@ -58,19 +56,15 @@
 
 .thmfdn-menu > li > a{
 	display: inline-block;
-	margin-bottom: 0.25em;
+	margin: 0.25em 0;
 }
 
 .thmfdn-menu a{
 	padding: 0.75em 1em;
 }
 
-.thmfdn-menu a:hover{
-	background: #444;
-}
-
 .thmfdn-menu ul{
-	margin-top: 0.75em;
+	margin-top: 0.90em;
 	text-align: left;
 }
 
@@ -90,10 +84,6 @@
 	text-align: left;
 }
 
-.thmfdn-mobile-menu > li{
-	display: block;
-}
-
 .thmfdn-mobile-menu > li > a{
 	display: block;
 	margin: 0;
@@ -108,13 +98,12 @@
 }
 
 .thmfdn-mobile-menu ul{
-	display: block;
 	position: relative;
 	margin-top: 0;
+	padding: 0.75em;
 }
 
 .thmfdn-mobile-menu ul ul{
-	display: block;
 	position: relative;
 	left: auto;
 }
@@ -125,6 +114,14 @@
 -------------------------------------------------------------- */
 
 @media screen and (min-width : 900px) {
+
+	.thmfdn-menu:after{
+		visibility: hidden;
+		display: block;
+		content: "";
+		clear: both;
+		height: 0;
+	}
 
 	.thmfdn-menu > li {
 		display: block;
@@ -144,13 +141,13 @@
 
 
 
-/* =Desktop Styles
+/* =Arrow Styles
 -------------------------------------------------------------- */
+
 .thmfdn-menu-arrows .has-submenu > a{
 	padding-right: 3.5em;
 }
 .thmfdn-menu-arrows .toggle-submenu{
-	background: rgba( 255, 255, 255, 0.05);
 	width: 3em;
 	display: inline-block;
 	height: 3em;
@@ -160,11 +157,8 @@
 	right: 0;
 }
 
-.thmfdn-menu-arrows a:hover .toggle-submenu{
-	background: transparent;
-}
 
-
+/* Standard arrow styles */
 .thmfdn-menu-arrows .toggle-submenu:after {
 	content: '';
 	position: absolute;
@@ -188,6 +182,8 @@
 	border-left-color: rgba(255,255,255,.5);
 }
 
+
+/* Javascript menu arrow styles */
 .thmfdn-menu-arrows .open-submenu > ul{
 	display: block;
 }
@@ -210,5 +206,80 @@
 }
 
 
+/* Javascript mobile menu arrow styles */
+.thmfdn-menu-arrows.thmfdn-mobile-menu ul a .toggle-submenu:after {
+	margin-top: -3px;
+	margin-right: -3px;
+
+	border: 5px solid transparent;
+	border-top-color: #fff; /* IE8 */
+	border-top-color: rgba(255,255,255,.5);
+}
+
+/* Javascript mobile menu arrow styles */
+.thmfdn-menu-arrows.thmfdn-mobile-menu ul .open-submenu a .toggle-submenu:after {
+	margin-top: -8px;
+
+	border: 5px solid transparent;
+	border-bottom-color: #fff; /* IE8 */
+	border-bottom-color: rgba(255,255,255,.5);
+}
 
 
+
+
+
+
+
+
+
+/* =Colors
+-------------------------------------------------------------- */
+
+.thmfdn-menu,
+.thmfdn-menu a,
+.thmfdn-menu ul{
+	background: #333;
+	color: #eee;
+}
+
+.thmfdn-menu a:hover{
+	background: rgba( 255, 255, 255, 0.15);
+}
+
+.thmfdn-mobile-menu ul li:first-child a{
+	border-top: 1px solid rgba( 255, 255, 255, 0.1);
+}
+.thmfdn-mobile-menu a{
+	border-bottom: 1px solid rgba( 255, 255, 255, 0.1);
+}
+
+.thmfdn-menu-arrows.thmfdn-mobile-menu .toggle-submenu{
+	background: none;
+}
+
+.thmfdn-menu-arrows.thmfdn-mobile-menu .toggle-submenu:hover{
+	background: rgba( 255, 255, 255, 0.1);
+}
+
+.thmfdn-mobile-menu ul,
+.thmfdn-mobile-menu ul a{
+	background: rgba( 255, 255, 255, 0.1);
+}
+
+.thmfdn-mobile-menu ul ul,
+.thmfdn-mobile-menu ul ul a{
+	background: rgba( 255, 255, 255, 0.2);
+}
+
+.thmfdn-mobile-menu ul ul a{
+	background: transparent;
+}
+
+.thmfdn-menu-arrows .toggle-submenu{
+	background: rgba( 255, 255, 255, 0.1);
+}
+
+.thmfdn-menu-arrows .open-submenu .toggle-submenu{
+	background: rgba( 255, 255, 255, 0.1 );
+}
