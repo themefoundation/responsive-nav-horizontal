@@ -24,7 +24,7 @@
 	z-index: 1000;
 }
 
-.thmfdn-menu li:hover > ul{
+.thmfdn-menu.hover li:hover > ul{
 	display: block;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .thmfdn-menu a{
-	padding: 0.5em 0.75em;
+	padding: 0.75em 1em;
 }
 
 .thmfdn-menu a:hover{
@@ -70,7 +70,7 @@
 }
 
 .thmfdn-menu ul{
-	margin-top: 0.5em;
+	margin-top: 0.75em;
 	text-align: left;
 }
 
@@ -141,14 +141,19 @@
 
 }
 
+
+
+
+/* =Desktop Styles
+-------------------------------------------------------------- */
 .thmfdn-menu-arrows .has-submenu > a{
-	padding-right: 3em;
+	padding-right: 3.5em;
 }
 .thmfdn-menu-arrows .toggle-submenu{
 	background: rgba( 255, 255, 255, 0.05);
-	width: 2.5em;
+	width: 3em;
 	display: inline-block;
-	height: 2.5em;
+	height: 3em;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -164,7 +169,7 @@
 	content: '';
 	position: absolute;
 	top: 50%;
-	right: 1em;
+	right: 1.25em;
 	margin-top: -3px;
 	height: 0;
 	width: 0;
@@ -183,35 +188,27 @@
 	border-left-color: rgba(255,255,255,.5);
 }
 
-
-
-
-
-
-
-
-/*** arrows (for all except IE7) **/
-.sf-arrows .sf-with-ul {
-	padding-right: 2.5em;
-	*padding-right: 1em; /* no CSS arrows for IE7 (lack pseudo-elements) */
+.thmfdn-menu-arrows .open-submenu > ul{
+	display: block;
 }
-/* styling for both css and generated arrows */
 
-.sf-arrows > li > .sf-with-ul:focus:after,
-.sf-arrows > li:hover > .sf-with-ul:after,
-.sf-arrows > .sfHover > .sf-with-ul:after {
-	border-top-color: white; /* IE8 fallback colour */
+.thmfdn-menu-arrows .open-submenu > a .toggle-submenu:after {
+	margin-top: -8px;
+
+	border: 5px solid transparent;
+	border-bottom-color: #fff; /* IE8 */
+	border-bottom-color: rgba(255,255,255,.5);
 }
-/* styling for right-facing arrows */
-.sf-arrows ul .sf-with-ul:after {
+
+.thmfdn-menu-arrows ul .open-submenu > a .toggle-submenu:after {
 	margin-top: -5px;
-	margin-right: -3px;
-	border-color: transparent;
-	border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
-	border-left-color: rgba(255,255,255,.5);
+	margin-right: 5px;
+
+	border: 5px solid transparent;
+	border-right-color: #fff; /* IE8 */
+	border-right-color: rgba(255,255,255,.5);
 }
-.sf-arrows ul li > .sf-with-ul:focus:after,
-.sf-arrows ul li:hover > .sf-with-ul:after,
-.sf-arrows ul .sfHover > .sf-with-ul:after {
-	border-left-color: white;
-}
+
+
+
+
