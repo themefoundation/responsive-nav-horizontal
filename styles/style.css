@@ -89,23 +89,24 @@
 	margin: 0;
 }
 
-.thmfdn-mobile-menu ul a{
+/*.thmfdn-mobile-menu ul a{
 	padding-left: 1.5em;
 }
 
 .thmfdn-mobile-menu ul ul a{
 	padding-left: 3em;
-}
+}*/
 
 .thmfdn-mobile-menu ul{
 	position: relative;
+	top: auto;
 	margin-top: 0;
 	padding: 0.75em;
 }
 
 .thmfdn-mobile-menu ul ul{
 	position: relative;
-	left: auto;
+	left: 0;
 }
 
 
@@ -238,6 +239,7 @@
 
 .thmfdn-menu,
 .thmfdn-menu a,
+.thmfdn-menu li,
 .thmfdn-menu ul{
 	background: #333;
 	color: #eee;
@@ -272,14 +274,10 @@
 	background: rgba( 255, 255, 255, 0.2);
 }
 
-.thmfdn-mobile-menu ul ul a{
-	background: transparent;
-}
-
-.thmfdn-menu-arrows .toggle-submenu{
+.thmfdn-mobile-menu .toggle-submenu{
 	background: rgba( 255, 255, 255, 0.1);
 }
 
-.thmfdn-menu-arrows .open-submenu .toggle-submenu{
+.thmfdn-mobile-menu .open-submenu .toggle-submenu{
 	background: rgba( 255, 255, 255, 0.1 );
 }
