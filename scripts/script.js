@@ -33,7 +33,7 @@ var touch = false;
 			if( ! touch ) {
 				$('.thmfdn-menu').addClass('hover');
 				$('.toggle-submenu').unbind();
-				// $('.toggle-submenu').removeClass('open-submenu')
+				$('.open-submenu').removeClass('open-submenu');
 			}
 		}
 	}
