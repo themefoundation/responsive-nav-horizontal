@@ -42,7 +42,6 @@
 }
 
 
-
 /* =Standard Mobile Styles
 -------------------------------------------------------------- */
 
@@ -80,7 +79,50 @@
 /* =Toggled Mobile Styles
 -------------------------------------------------------------- */
 
+#menu-toggle-button{
+	width: 3.25em;
+	height: 3em;
+	padding: 0.5em;
+	cursor: pointer;
+	transition:  all 1s;
+}
+
+
+
+#menu-toggle-button.toggle-open div{
+	transition:  all 1s;
+
+}
+
+#menu-toggle-button div:before{
+	content: '';
+	border-top: 0.4em solid #999;
+	display: block;
+	width: 2.25em;
+	margin-top: 0.4em;
+	right: 0;
+}
+
+#menu-toggle-button div{
+	content: '';
+	border-top: 0.4em solid #999;
+	display: block;
+	width: 2.25em;
+	float: right;
+}
+
+#menu-toggle-button div:after{
+	content: '';
+	border-top: 0.4em solid #999;
+	display: block;
+	width: 2.25em;
+	margin-top: 0.4em;
+}
+
+
+
 .thmfdn-mobile-menu{
+	display: none;
 	text-align: left;
 }
 
@@ -88,14 +130,6 @@
 	display: block;
 	margin: 0;
 }
-
-/*.thmfdn-mobile-menu ul a{
-	padding-left: 1.5em;
-}
-
-.thmfdn-mobile-menu ul ul a{
-	padding-left: 3em;
-}*/
 
 .thmfdn-mobile-menu ul{
 	position: relative;
@@ -240,8 +274,10 @@
 .thmfdn-menu,
 .thmfdn-menu a,
 .thmfdn-menu li,
-.thmfdn-menu ul{
-	background: #333;
+.thmfdn-menu ul,
+#menu-toggle-button.toggle-open{
+
+	background: #444;
 	color: #eee;
 }
 
@@ -281,3 +317,4 @@
 .thmfdn-mobile-menu .open-submenu > a .toggle-submenu{
 	background: rgba( 255, 255, 255, 0.1 );
 }
+

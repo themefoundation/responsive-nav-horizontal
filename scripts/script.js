@@ -21,6 +21,10 @@ var touch = false;
 	function setMenuToggle( touch ) {
 		var viewportWidth = viewportSize.getWidth();
 		if( viewportWidth < 600 && !$('.thmfdn-menu').hasClass('thmfdn-mobile-menu') ) {
+			$('body').prepend('<div id="menu-toggle-button"><div></div></div>');
+			$('#menu-toggle-button').click(function(){
+				$('.thmfdn-mobile-menu').toggle();
+			});
 			$('.thmfdn-menu').addClass('thmfdn-mobile-menu');
 			$('.thmfdn-menu').removeClass('hover');
 			$('.toggle-submenu').unbind();
