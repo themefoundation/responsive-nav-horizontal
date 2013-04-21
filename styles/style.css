@@ -278,6 +278,6 @@
 	background: rgba( 255, 255, 255, 0.1);
 }
 
-.thmfdn-mobile-menu .open-submenu .toggle-submenu{
+.thmfdn-mobile-menu .open-submenu > a .toggle-submenu{
 	background: rgba( 255, 255, 255, 0.1 );
 }
