@@ -1,6 +1,6 @@
 (function($) {
 
-var touch = false;
+	var touch = false;
 
 	$(document).ready(function() {
 
@@ -18,8 +18,11 @@ var touch = false;
 		setMenuToggle( touch );
 	});
 
+
+
 	function setMenuToggle( touch ) {
 		var viewportWidth = viewportSize.getWidth();
+
 		if( viewportWidth < 600 && !$('.thmfdn-menu').hasClass('thmfdn-mobile-menu') ) {
 			$('body').prepend('<div id="menu-toggle-button"><div></div></div>');
 			$('#menu-toggle-button').click(function(){
@@ -32,20 +35,27 @@ var touch = false;
 				toggleSubmenu( $(this) );
 			});
 		}
+
 		if( viewportWidth >= 600 && $('.thmfdn-menu').hasClass('thmfdn-mobile-menu') ) {
 			$('.thmfdn-menu').removeClass('thmfdn-mobile-menu');
+
 			if( ! touch ) {
 				$('.thmfdn-menu').addClass('hover');
 				$('.toggle-submenu').unbind();
 				$('.open-submenu').removeClass('open-submenu');
 			}
+
 		}
+
 	}
+
+
 
 	function setMenuArrows( touch ) {
 		$('.thmfdn-menu').addClass('thmfdn-menu-arrows');
 		$('.thmfdn-menu li').has('ul').addClass('has-submenu');
 		$('.has-submenu > a').append('<span class="toggle-submenu"></span>');
+
 		if( touch ) {
 			$('.toggle-submenu').unbind();
 			$('.toggle-submenu').click(function(){
@@ -53,11 +63,15 @@ var touch = false;
 			});
 		}
 
+
 	}
+
+
 
 	/* Adds and removes the "open-submenu" class from list items containing an open submenu */
 	function toggleSubmenu( element ) {
 		var submenu = element.closest('.has-submenu');
+
 		if( submenu.hasClass('open-submenu') ) {
 			submenu.find('.open-submenu').removeClass('open-submenu');
 			submenu.removeClass('open-submenu');
@@ -66,6 +80,7 @@ var touch = false;
 			submenu.parents('.has-submenu').addClass('open-submenu');
 			submenu.addClass('open-submenu');
 		}
+
 	}
 
 })(jQuery);
