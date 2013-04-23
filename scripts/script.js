@@ -37,7 +37,10 @@
 		}
 
 		if( viewportWidth >= 600 && $('.thmfdn-menu').hasClass('thmfdn-mobile-menu') ) {
+			$('#menu-toggle-button').remove();
+
 			$('.thmfdn-menu').removeClass('thmfdn-mobile-menu');
+
 
 			if( ! touch ) {
 				$('.thmfdn-menu').addClass('hover');
