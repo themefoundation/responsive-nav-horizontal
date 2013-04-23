@@ -192,7 +192,6 @@
 	right: 0;
 }
 
-
 /* Standard arrow styles */
 .thmfdn-menu-arrows .toggle-submenu:after {
 	content: '';
@@ -215,6 +214,20 @@
 	border: 5px solid transparent;
 	border-left-color: #fff; /* IE8 */
 	border-left-color: rgba(255,255,255,.5);
+}
+
+
+/* CSS hover menu arrow styles */
+.thmfdn-menu-arrows.hover .has-submenu > a{
+	padding-right: 2em;
+}
+
+.thmfdn-menu-arrows.hover .toggle-submenu{
+	width: 1.5em;
+}
+
+.thmfdn-menu-arrows.hover .toggle-submenu:after {
+	right: .5em;
 }
 
 
