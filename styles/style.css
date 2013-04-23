@@ -84,14 +84,6 @@
 	height: 3em;
 	padding: 0.5em;
 	cursor: pointer;
-	transition:  all 1s;
-}
-
-
-
-#menu-toggle-button.toggle-open div{
-	transition:  all 1s;
-
 }
 
 #menu-toggle-button div:before{
@@ -122,7 +114,6 @@
 
 
 .thmfdn-mobile-menu{
-	display: none;
 	text-align: left;
 }
 
@@ -141,6 +132,10 @@
 .thmfdn-mobile-menu ul ul{
 	position: relative;
 	left: 0;
+}
+
+.hide-mobile-menu{
+	display: none;
 }
 
 
@@ -288,7 +283,7 @@
 .thmfdn-menu a,
 .thmfdn-menu li,
 .thmfdn-menu ul,
-#menu-toggle-button.toggle-open{
+#menu-toggle-button.open-mobile-menu{
 
 	background: #444;
 	color: #eee;
