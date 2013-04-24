@@ -24,7 +24,7 @@
 	z-index: 1000;
 }
 
-.thmfdn-menu.hover li:hover > ul{
+.thmfdn-menu.menu-hover li:hover > ul{
 	display: block;
 }
 
@@ -113,28 +113,28 @@
 
 
 
-.thmfdn-mobile-menu{
+.menu-mobile.menu-arrows{
 	text-align: left;
 }
 
-.thmfdn-mobile-menu > li > a{
+.menu-mobile.menu-arrows > li > a{
 	display: block;
 	margin: 0;
 }
 
-.thmfdn-mobile-menu ul{
+.menu-mobile.menu-arrows ul{
 	position: relative;
 	top: auto;
 	margin-top: 0;
 	padding: 0.75em;
 }
 
-.thmfdn-mobile-menu ul ul{
+.menu-mobile.menu-arrows ul ul{
 	position: relative;
 	left: 0;
 }
 
-.hide-mobile-menu{
+.hide-mobile{
 	display: none;
 }
 
@@ -174,10 +174,10 @@
 /* =Arrow Styles
 -------------------------------------------------------------- */
 
-.thmfdn-menu-arrows .has-submenu > a{
+.menu-arrows .has-submenu > a{
 	padding-right: 3.5em;
 }
-.thmfdn-menu-arrows .toggle-submenu{
+.menu-arrows .toggle-submenu{
 	width: 3em;
 	display: inline-block;
 	height: 3em;
@@ -188,7 +188,7 @@
 }
 
 /* Standard arrow styles */
-.thmfdn-menu-arrows .toggle-submenu:after {
+.menu-arrows .toggle-submenu:after {
 	content: '';
 	position: absolute;
 	top: 50%;
@@ -202,7 +202,7 @@
 	border-top-color: rgba(255,255,255,.5);
 }
 
-.thmfdn-menu-arrows ul .toggle-submenu:after {
+.menu-arrows ul .toggle-submenu:after {
 	margin-top: -5px;
 	margin-right: -3px;
 
@@ -213,25 +213,25 @@
 
 
 /* CSS hover menu arrow styles */
-.thmfdn-menu-arrows.hover .has-submenu > a{
+.menu-arrows.menu-hover .has-submenu > a{
 	padding-right: 2em;
 }
 
-.thmfdn-menu-arrows.hover .toggle-submenu{
+.menu-arrows.menu-hover .toggle-submenu{
 	width: 1.5em;
 }
 
-.thmfdn-menu-arrows.hover .toggle-submenu:after {
+.menu-arrows.menu-hover .toggle-submenu:after {
 	right: .5em;
 }
 
 
 /* Javascript menu arrow styles */
-.thmfdn-menu-arrows .open-submenu > ul{
+.menu-arrows .open-submenu > ul{
 	display: block;
 }
 
-.thmfdn-menu-arrows .open-submenu > a .toggle-submenu:after {
+.menu-arrows .open-submenu > a .toggle-submenu:after {
 	margin-top: -8px;
 
 	border: 5px solid transparent;
@@ -239,7 +239,7 @@
 	border-bottom-color: rgba(255,255,255,.5);
 }
 
-.thmfdn-menu-arrows ul .open-submenu > a .toggle-submenu:after {
+.menu-arrows ul .open-submenu > a .toggle-submenu:after {
 	margin-top: -5px;
 	margin-right: 5px;
 
@@ -250,7 +250,7 @@
 
 
 /* Javascript mobile menu arrow styles */
-.thmfdn-menu-arrows.thmfdn-mobile-menu ul a .toggle-submenu:after {
+.menu-arrows.menu-mobile.menu-arrows ul a .toggle-submenu:after {
 	margin-top: -3px;
 	margin-right: -3px;
 
@@ -260,7 +260,7 @@
 }
 
 /* Javascript mobile menu arrow styles */
-.thmfdn-menu-arrows.thmfdn-mobile-menu ul .open-submenu a .toggle-submenu:after {
+.menu-arrows.menu-mobile.menu-arrows ul .open-submenu a .toggle-submenu:after {
 	margin-top: -8px;
 
 	border: 5px solid transparent;
@@ -282,9 +282,7 @@
 .thmfdn-menu,
 .thmfdn-menu a,
 .thmfdn-menu li,
-.thmfdn-menu ul,
-#menu-toggle-button.open-mobile-menu{
-
+.thmfdn-menu ul{
 	background: #444;
 	color: #eee;
 }
@@ -293,36 +291,32 @@
 	background: rgba( 255, 255, 255, 0.15);
 }
 
-.thmfdn-mobile-menu ul li:first-child a{
+.menu-mobile.menu-arrows ul li:first-child a{
 	border-top: 1px solid rgba( 255, 255, 255, 0.1);
 }
-.thmfdn-mobile-menu a{
+.menu-mobile.menu-arrows a{
 	border-bottom: 1px solid rgba( 255, 255, 255, 0.1);
 }
 
-.thmfdn-menu-arrows.thmfdn-mobile-menu .toggle-submenu{
+.menu-mobile.menu-arrows .toggle-submenu{
 	background: none;
 }
 
-.thmfdn-menu-arrows.thmfdn-mobile-menu .toggle-submenu:hover{
+.menu-mobile.menu-arrows .toggle-submenu:hover{
 	background: rgba( 255, 255, 255, 0.1);
 }
 
-.thmfdn-mobile-menu ul,
-.thmfdn-mobile-menu ul a{
+.menu-mobile.menu-arrows ul,
+.menu-mobile.menu-arrows ul a{
 	background: rgba( 255, 255, 255, 0.1);
 }
 
-.thmfdn-mobile-menu ul ul,
-.thmfdn-mobile-menu ul ul a{
+.menu-mobile.menu-arrows ul ul,
+.menu-mobile.menu-arrows ul ul a{
 	background: rgba( 255, 255, 255, 0.2);
 }
 
-.thmfdn-mobile-menu .toggle-submenu{
-	background: rgba( 255, 255, 255, 0.1);
-}
-
-.thmfdn-mobile-menu .open-submenu > a .toggle-submenu{
+.menu-mobile.menu-arrows .open-submenu > a .toggle-submenu{
 	background: rgba( 255, 255, 255, 0.1 );
 }
 
